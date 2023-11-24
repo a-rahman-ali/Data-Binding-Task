@@ -1,0 +1,26 @@
+<div>
+  <h4>Input in field-1 to see changes in field-2</h4>
+  <label>input field-1</label>
+  <input type="text" [value]="field1" (input)="onNameChange1($event)">
+  <br><br>
+  <label>input field-2</label>
+  <input type="text" [value]="field1">
+</div>
+<hr>
+<div>
+  <h4>Input in field-2 to see changes in field-1</h4>
+  <label>input field-1</label>
+  <input type="text" [value]="field2">
+  <br><br>
+  <label>input field-2</label>
+  <input type="text" [value]="field2" (input)="onNameChange2($event)">
+</div>
+<hr>
+<div>
+  <h4>Input in any field to see changes in other one</h4>
+  <label>input field-1</label>
+  <input type="text" [value]="field3" (input)="onNameChange3($event)">
+  <br><br>
+  <label>input field-2</label>
+  <input type="text" [value]="field3" (input)="onNameChange3($event)">
+</div>
